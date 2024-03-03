@@ -144,7 +144,7 @@ class SmileDecoder:
             value = self._decode_value()
             obj[key] = value
         self._index += 1
-        return dict(sorted(obj.items()))
+        return obj
 
     def _decode_array(self):
         '''
