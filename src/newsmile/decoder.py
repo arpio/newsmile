@@ -275,8 +275,8 @@ class SmileDecoder:
         if buffer[:3].decode(self._encoding) != ':)\n':
             raise ValueError('invalid header')
         self._properties['raw-binary'] = buffer[3] & 4 > 0
-        self._properties['shared-keys-names'] = buffer[3] & 2 > 0
-        self._properties['shared-string-values'] = buffer[3] & 1 > 0
+        self._properties['shared-string-values'] = buffer[3] & 2 > 0
+        self._properties['shared-keys-names'] = buffer[3] & 1 > 0
 
     def decode(self, buffer):
         '''
