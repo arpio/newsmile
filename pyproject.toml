@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "newsmile"
+version = "1.1"
+authors = [
+  { name="Laurent Mornet", email="laurent.mornet@gmail.com" },
+]
+description = "A Package containing tools for decoding/encoding Smile Format data to/from python object"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Smile (data interchange format)" = "https://en.wikipedia.org/wiki/Smile_%28data_interchange_format%29"
+"Smile Format Specification" = "https://github.com/FasterXML/smile-format-specification"
