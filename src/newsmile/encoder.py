@@ -112,6 +112,10 @@ class SmileEncoder:
             return 4 if buf else 8
         return self._float_precision
 
+    def _encode_raw_binary(self, value):
+        self._encode_vint(len(value))
+        self._buffer.extend(value)
+
     def _encode_object(self, dico):
         '''
         Encode a dict
@@ -296,5 +300,7 @@ class SmileEncoder:
             self._encode_object(value)
         elif isinstance(value, (list, tuple)):
             self._encode_array(value)
+        elif isinstance(value, bytes) and self._raw_binary:
+            self._encode_raw_binary(value)
         else:
             raise ValueError('Value case!')
