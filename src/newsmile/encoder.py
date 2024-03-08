@@ -113,6 +113,7 @@ class SmileEncoder:
         return self._float_precision
 
     def _encode_raw_binary(self, value):
+        self._buffer.append(0xfd)
         self._encode_vint(len(value))
         self._buffer.extend(value)
 
