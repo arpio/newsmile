@@ -39,19 +39,17 @@ class SmileDecoder:
         '''
         Save shared key in dedicated buffer
         '''
-        if len(key) <= 64:
-            if len(self._shared_keys) >= 1024:
-                self._shared_keys = []
-            self._shared_keys.append(key)
+        if len(self._shared_keys) >= 1024:
+            self._shared_keys = []
+        self._shared_keys.append(key)
 
     def _set_shared_value(self, value):
         '''
         Save shared value in dedicated buffer
         '''
-        if len(value) <= 64:
-            if len(self._shared_values) >= 1024:
-                self._shared_values = []
-            self._shared_values.append(value)
+        if len(self._shared_values) >= 1024:
+            self._shared_values = []
+        self._shared_values.append(value)
 
     @classmethod
     def _unzigzag(cls, value, mask = None):
