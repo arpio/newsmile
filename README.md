@@ -79,8 +79,5 @@ with open('smile-data-file', 'rb') as smile_file:
 
 ### Running tests
 ```bash
-cd tests
-```
-```python
-python test.py
+pytest
 ```
