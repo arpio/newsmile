@@ -134,7 +134,7 @@
       "index.max_shingle_diff": "4",
       "index.number_of_replicas": "1",
       "index.number_of_shards": "5",
-      "index.provided_name": "iredell-statesville-schools-nc_requests_production_20230810211331020",
+      "index.provided_name": "long-identifier-111111111111111111111111111111111111111111111111111111",
       "index.refresh_interval": "1s",
       "index.uuid": "wXqc4FN6Ts29yOkKfYxuaQ",
       "index.version.created": "7100299"
