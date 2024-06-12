@@ -122,6 +122,8 @@ class SmileDecoder:
                 buffer.append(token)
                 token = self._get_bytes(1)[0]
             buffer = buffer.decode(encoding)
+            if token_type == 'key':
+                self._set_shared_key(buffer)
         return buffer
 
     def _get_bytes(self, count):
@@ -249,9 +251,9 @@ class SmileDecoder:
         # Long Shared Key Name Reference
         elif 0x30 <= token <= 0x33:
             key = self._get_referenced('key', (token & 0b11) << 8 | self._get_bytes(1)[0])
-        elif token == 0x34:
         # Long NOT Shared Unicode Key Name
-            self._string('key', None, self._encoding)
+        elif token == 0x34:
+            key = self._string('key', None, self._encoding)
         # Short Shared Key Name Reference
         elif 0x40 <= token <= 0x7F:
             key = self._get_referenced('key', token - 0x40)
