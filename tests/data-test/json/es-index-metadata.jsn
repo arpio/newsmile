@@ -1,0 +1,317 @@
+{
+  "iredell-statesville-schools-nc_requests_production_20230810211331020": {
+    "version": 23,
+    "mapping_version": 6,
+    "settings_version": 2,
+    "aliases_version": 2,
+    "routing_num_shards": 640,
+    "state": "open",
+    "settings": {
+      "index.analysis.analyzer.searchkick_autocomplete_search.filter": [
+        "lowercase",
+        "asciifolding"
+      ],
+      "index.analysis.analyzer.searchkick_autocomplete_search.tokenizer": "keyword",
+      "index.analysis.analyzer.searchkick_autocomplete_search.type": "custom",
+      "index.analysis.analyzer.searchkick_index.char_filter": [
+        "ampersand"
+      ],
+      "index.analysis.analyzer.searchkick_index.filter": [
+        "lowercase",
+        "asciifolding",
+        "searchkick_index_shingle",
+        "searchkick_stemmer"
+      ],
+      "index.analysis.analyzer.searchkick_index.tokenizer": "standard",
+      "index.analysis.analyzer.searchkick_index.type": "custom",
+      "index.analysis.analyzer.searchkick_keyword.filter": [
+        "lowercase"
+      ],
+      "index.analysis.analyzer.searchkick_keyword.tokenizer": "keyword",
+      "index.analysis.analyzer.searchkick_keyword.type": "custom",
+      "index.analysis.analyzer.searchkick_search.char_filter": [
+        "ampersand"
+      ],
+      "index.analysis.analyzer.searchkick_search.filter": [
+        "lowercase",
+        "asciifolding",
+        "searchkick_search_shingle",
+        "searchkick_stemmer"
+      ],
+      "index.analysis.analyzer.searchkick_search.tokenizer": "standard",
+      "index.analysis.analyzer.searchkick_search.type": "custom",
+      "index.analysis.analyzer.searchkick_search2.char_filter": [
+        "ampersand"
+      ],
+      "index.analysis.analyzer.searchkick_search2.filter": [
+        "lowercase",
+        "asciifolding",
+        "searchkick_stemmer"
+      ],
+      "index.analysis.analyzer.searchkick_search2.tokenizer": "standard",
+      "index.analysis.analyzer.searchkick_search2.type": "custom",
+      "index.analysis.analyzer.searchkick_suggest_index.filter": [
+        "lowercase",
+        "asciifolding",
+        "searchkick_suggest_shingle"
+      ],
+      "index.analysis.analyzer.searchkick_suggest_index.tokenizer": "standard",
+      "index.analysis.analyzer.searchkick_suggest_index.type": "custom",
+      "index.analysis.analyzer.searchkick_text_end_index.filter": [
+        "lowercase",
+        "asciifolding",
+        "reverse",
+        "searchkick_edge_ngram",
+        "reverse"
+      ],
+      "index.analysis.analyzer.searchkick_text_end_index.tokenizer": "keyword",
+      "index.analysis.analyzer.searchkick_text_end_index.type": "custom",
+      "index.analysis.analyzer.searchkick_text_middle_index.filter": [
+        "lowercase",
+        "asciifolding",
+        "searchkick_ngram"
+      ],
+      "index.analysis.analyzer.searchkick_text_middle_index.tokenizer": "keyword",
+      "index.analysis.analyzer.searchkick_text_middle_index.type": "custom",
+      "index.analysis.analyzer.searchkick_text_start_index.filter": [
+        "lowercase",
+        "asciifolding",
+        "searchkick_edge_ngram"
+      ],
+      "index.analysis.analyzer.searchkick_text_start_index.tokenizer": "keyword",
+      "index.analysis.analyzer.searchkick_text_start_index.type": "custom",
+      "index.analysis.analyzer.searchkick_word_end_index.filter": [
+        "lowercase",
+        "asciifolding",
+        "reverse",
+        "searchkick_edge_ngram",
+        "reverse"
+      ],
+      "index.analysis.analyzer.searchkick_word_end_index.tokenizer": "standard",
+      "index.analysis.analyzer.searchkick_word_end_index.type": "custom",
+      "index.analysis.analyzer.searchkick_word_middle_index.filter": [
+        "lowercase",
+        "asciifolding",
+        "searchkick_ngram"
+      ],
+      "index.analysis.analyzer.searchkick_word_middle_index.tokenizer": "standard",
+      "index.analysis.analyzer.searchkick_word_middle_index.type": "custom",
+      "index.analysis.analyzer.searchkick_word_search.filter": [
+        "lowercase",
+        "asciifolding"
+      ],
+      "index.analysis.analyzer.searchkick_word_search.tokenizer": "standard",
+      "index.analysis.analyzer.searchkick_word_search.type": "custom",
+      "index.analysis.analyzer.searchkick_word_start_index.filter": [
+        "lowercase",
+        "asciifolding",
+        "searchkick_edge_ngram"
+      ],
+      "index.analysis.analyzer.searchkick_word_start_index.tokenizer": "standard",
+      "index.analysis.analyzer.searchkick_word_start_index.type": "custom",
+      "index.analysis.char_filter.ampersand.mappings": [
+        "&=> and "
+      ],
+      "index.analysis.char_filter.ampersand.type": "mapping",
+      "index.analysis.filter.searchkick_edge_ngram.max_gram": "50",
+      "index.analysis.filter.searchkick_edge_ngram.min_gram": "1",
+      "index.analysis.filter.searchkick_edge_ngram.type": "edge_ngram",
+      "index.analysis.filter.searchkick_index_shingle.token_separator": "",
+      "index.analysis.filter.searchkick_index_shingle.type": "shingle",
+      "index.analysis.filter.searchkick_ngram.max_gram": "50",
+      "index.analysis.filter.searchkick_ngram.min_gram": "1",
+      "index.analysis.filter.searchkick_ngram.type": "ngram",
+      "index.analysis.filter.searchkick_search_shingle.output_unigrams": "false",
+      "index.analysis.filter.searchkick_search_shingle.output_unigrams_if_no_shingles": "true",
+      "index.analysis.filter.searchkick_search_shingle.token_separator": "",
+      "index.analysis.filter.searchkick_search_shingle.type": "shingle",
+      "index.analysis.filter.searchkick_stemmer.language": "English",
+      "index.analysis.filter.searchkick_stemmer.type": "snowball",
+      "index.analysis.filter.searchkick_suggest_shingle.max_shingle_size": "5",
+      "index.analysis.filter.searchkick_suggest_shingle.type": "shingle",
+      "index.creation_date": "1691702011030",
+      "index.max_ngram_diff": "49",
+      "index.max_shingle_diff": "4",
+      "index.number_of_replicas": "1",
+      "index.number_of_shards": "5",
+      "index.provided_name": "iredell-statesville-schools-nc_requests_production_20230810211331020",
+      "index.refresh_interval": "1s",
+      "index.uuid": "wXqc4FN6Ts29yOkKfYxuaQ",
+      "index.version.created": "7100299"
+    },
+    "mappings": [
+      {
+        "_doc": {
+          "_routing": {
+            "required": true
+          },
+          "dynamic_templates": [
+            {
+              "string_template": {
+                "match": "*",
+                "match_mapping_type": "string",
+                "mapping": {
+                  "fields": {},
+                  "ignore_above": 2000,
+                  "type": "keyword"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "close_request_type_ids": {
+              "type": "long"
+            },
+            "closure_reasons": {
+              "type": "keyword",
+              "ignore_above": 2000,
+              "fields": {
+                "analyzed": {
+                  "type": "text",
+                  "analyzer": "searchkick_index"
+                }
+              }
+            },
+            "created_at": {
+              "type": "date"
+            },
+            "department_ids": {
+              "type": "long"
+            },
+            "department_names": {
+              "type": "keyword",
+              "ignore_above": 2000
+            },
+            "due_date": {
+              "type": "date"
+            },
+            "id": {
+              "type": "keyword",
+              "ignore_above": 2000,
+              "fields": {
+                "analyzed": {
+                  "type": "text",
+                  "analyzer": "searchkick_index"
+                }
+              }
+            },
+            "note_text": {
+              "type": "keyword",
+              "ignore_above": 2000,
+              "fields": {
+                "analyzed": {
+                  "type": "text",
+                  "analyzer": "searchkick_index"
+                }
+              }
+            },
+            "poc_name": {
+              "type": "keyword",
+              "ignore_above": 2000,
+              "fields": {
+                "analyzed": {
+                  "type": "text",
+                  "analyzer": "searchkick_index"
+                }
+              }
+            },
+            "request_date": {
+              "type": "date"
+            },
+            "request_helper_ids": {
+              "type": "long"
+            },
+            "request_poc_ids": {
+              "type": "long"
+            },
+            "request_state": {
+              "type": "keyword",
+              "ignore_above": 2000
+            },
+            "request_text": {
+              "type": "keyword",
+              "ignore_above": 2000,
+              "fields": {
+                "analyzed": {
+                  "type": "text",
+                  "analyzer": "searchkick_index"
+                }
+              }
+            },
+            "requester_company": {
+              "type": "keyword",
+              "ignore_above": 2000
+            },
+            "requester_ids": {
+              "type": "long"
+            },
+            "requester_name": {
+              "type": "keyword",
+              "ignore_above": 2000,
+              "fields": {
+                "analyzed": {
+                  "type": "text",
+                  "analyzer": "searchkick_index"
+                }
+              }
+            },
+            "staff_cost": {
+              "type": "float"
+            },
+            "tag_ids": {
+              "type": "long"
+            },
+            "tag_name": {
+              "type": "keyword",
+              "ignore_above": 2000,
+              "fields": {
+                "analyzed": {
+                  "type": "text",
+                  "analyzer": "searchkick_index"
+                }
+              }
+            },
+            "visibility": {
+              "type": "keyword",
+              "ignore_above": 2000
+            }
+          }
+        }
+      }
+    ],
+    "aliases": {
+      "iredell-statesville-schools-nc_requests_production": {}
+    },
+    "primary_terms": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "in_sync_allocations": {
+      "4": [
+        "7QxoWzmBRjusBhPtJ5kmJw",
+        "3bVOpcKtTNq7Ji0ADyBX4g"
+      ],
+      "2": [
+        "2YnVwiZTQ0uCeBP5m6bAzQ",
+        "BwtqfPRnQtWoXszUkEZwTw"
+      ],
+      "3": [
+        "OYkFFlc0Tvmm8b5nv6f5bw",
+        "nNSwLKkwS2ifVINuV0BpPg"
+      ],
+      "1": [
+        "yKX7e3FxRUqOz4xcoCb_lg",
+        "r3nRz7IKRnuF255aj_5V5w"
+      ],
+      "0": [
+        "BztF-IW9TvKEZFzbSrhuGQ",
+        "tZjMWLOxRW-MQ75_xiGq6g"
+      ]
+    },
+    "rollover_info": {},
+    "system": false
+  }
+}
