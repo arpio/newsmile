@@ -1,5 +1,5 @@
 {
-  "iredell-statesville-schools-nc_requests_production_20230810211331020": {
+  "long-identifier-111111111111111111111111111111111111111111111111111111": {
     "version": 23,
     "mapping_version": 6,
     "settings_version": 2,
@@ -280,7 +280,7 @@
       }
     ],
     "aliases": {
-      "iredell-statesville-schools-nc_requests_production": {}
+      "long-identifier-alias": {}
     },
     "primary_terms": [
       1,
